@@ -3,33 +3,39 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master' based on your default branch
+      - main # Change to your default branch if it's not "main"
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the code from the repository
+      # Step 1: Check out the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Set up Node.js
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.12.0'  # Updated Node.js version
+          node-version: '22.12.0' # Ensure it matches your project’s Node.js version
+          cache: 'npm'     # Cache npm dependencies for faster builds
 
-      # Install dependencies
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build the project
-      - name: Build project
+      # Step 4: Build the project
+      - name: Build the project
         run: npm run build
 
-      # Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token is automatically available
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages     # The branch to deploy to
+          folder: dist         # The folder containing the build output

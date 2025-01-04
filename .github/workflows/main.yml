@@ -42,3 +42,5 @@ jobs:
         with:
           branch: gh-pages     # The branch to deploy to
           folder: dist         # The folder containing the build output
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}

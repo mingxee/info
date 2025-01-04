@@ -1,43 +1,61 @@
 import React from 'react';
-import { Github, Facebook, Twitter, Instagram, Youtube, MessageCircle, Send } from 'lucide-react';
+import { FaGithub, FaTelegram, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaTiktok, FaDiscord, FaReddit, FaWeixin } from 'react-icons/fa';
 
 const socialLinks = [
   { 
     name: 'GitHub', 
-    icon: Github, 
+    icon: <FaGithub />, 
     url: 'https://github.com/mingxee',
     color: 'hover:bg-gray-800 hover:text-white'
   },
   { 
+    name: 'Discord', 
+    icon: <FaDiscord />, 
+    url: 'https://discord.com/users/860843138210201601',
+    color: 'hover:bg-blue-500 hover:text-white'
+  },
+  { 
     name: 'Telegram', 
-    icon: Send, 
+    icon: <FaTelegram />, 
     url: 'https://t.me/mongxee',
     color: 'hover:bg-blue-500 hover:text-white'
   },
   { 
+    name: 'TikTok', 
+    icon: <FaTiktok />, 
+    url: 'https://www.tiktok.com/@mingxee',
+    color: 'hover:bg-black hover:text-white'
+  },
+  { 
     name: 'Facebook', 
-    icon: Facebook, 
+    icon: <FaFacebook />, 
     url: 'https://www.facebook.com/AmMing.Lee',
     color: 'hover:bg-blue-600 hover:text-white'
   },
   { 
     name: 'Twitter', 
-    icon: Twitter, 
+    icon: <FaTwitter />, 
     url: 'https://x.com/rachaly26616',
     color: 'hover:bg-sky-500 hover:text-white'
   },
   { 
     name: 'Instagram', 
-    icon: Instagram, 
+    icon: <FaInstagram />, 
     url: 'https://www.instagram.com/mongfee168',
     color: 'hover:bg-pink-600 hover:text-white'
   },
   { 
     name: 'YouTube', 
-    icon: Youtube, 
+    icon: <FaYoutube />, 
     url: 'https://youtube.com/@lonely_8l',
     color: 'hover:bg-red-600 hover:text-white'
   },
+  { 
+    name: 'Reddit', 
+    icon: <FaReddit />, 
+    url: 'https://www.reddit.com/u/Rachaly/',
+    color: 'hover:bg-orange-600 hover:text-white'
+  }
 ];
 
 export default function SocialMedia() {
@@ -63,7 +81,9 @@ export default function SocialMedia() {
               className={`flex flex-col items-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 
                 transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${social.color}`}
             >
-              <social.icon className="w-8 h-8 mb-3 transition-colors duration-300" />
+              <div className="w-12 h-12 flex items-center justify-center mb-3 text-3xl transition-colors duration-300">
+                {social.icon}
+              </div>
               <span className="text-sm font-medium">
                 {social.name}
               </span>

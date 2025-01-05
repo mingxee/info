@@ -27,12 +27,12 @@ const projects = [
     link: '#'
   },
   {
-    title: 'Minecraft Server Project',
+    title: 'XeeMC Project',
     description: 'A survival Minecraft server supporting both Java and Bedrock editions.',
     icon: GamepadIcon,
     tags: ['Java', 'Docker', 'Redis'],
     features: ['Cross-Platform Play', 'Custom Plugins', 'Economy System', 'Anti-Cheat'],
-    link: '#'
+    link: 'https://xeemc.mingxee.xyz'
   }
 ];
 

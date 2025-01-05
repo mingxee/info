@@ -3,12 +3,22 @@ import { Bot, Wifi, Wrench, GamepadIcon } from 'lucide-react';
 
 const projects = [
   {
+    title: 'XeeMC Project',
+    description: 'A survival Minecraft server supporting both Java and Bedrock editions.',
+    icon: GamepadIcon,
+    tags: ['Java', 'Docker', 'Redis'],
+    features: ['Cross-Platform Play', 'Custom Plugins', 'Economy System', 'Anti-Cheat'],
+    link: 'https://xeemc.mingxee.xyz',
+    available: true,
+  },
+  {
     title: 'Discord Bot Project',
     description: 'A versatile bot for Discord servers with features like role management, music controls, and slash command support.',
     icon: Bot,
     tags: ['Node.js', 'Discord.js', 'MongoDB'],
     features: ['Role Management', 'Music Controls', 'Slash Commands', 'Moderation Tools'],
-    link: '#'
+    link: '#',
+    available: false,
   },
   {
     title: 'WIFIXee Project',
@@ -16,7 +26,8 @@ const projects = [
     icon: Wifi,
     tags: ['Python', 'Scapy', 'Linux'],
     features: ['Fake AP Creation', 'WPA Handshake Capture', 'Network Analysis', 'Report Generation'],
-    link: '#'
+    link: '#',
+    available: false,
   },
   {
     title: 'aXeeTool Project',
@@ -24,76 +35,118 @@ const projects = [
     icon: Wrench,
     tags: ['Python', 'Java', 'Shell'],
     features: ['Device Exploitation', 'Vulnerability Scanning', 'Payload Generation', 'Cross-Platform Support'],
-    link: '#'
+    link: '#',
+    available: false,
   },
-  {
-    title: 'XeeMC Project',
-    description: 'A survival Minecraft server supporting both Java and Bedrock editions.',
-    icon: GamepadIcon,
-    tags: ['Java', 'Docker', 'Redis'],
-    features: ['Cross-Platform Play', 'Custom Plugins', 'Economy System', 'Anti-Cheat'],
-    link: 'https://xeemc.mingxee.xyz'
-  }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-24 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white">
+            My Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of my notable projects that showcase my skills and interests in technology.
+          <p className="text-lg text-gray-700 dark:text-gray-400 mt-4 max-w-3xl mx-auto">
+            Explore my collection of projects that showcase creativity, technical skills, and passion for technology.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className={`relative p-8 rounded-2xl shadow-lg bg-gradient-to-r ${
+                project.available
+                  ? 'from-indigo-100 to-indigo-300 dark:from-indigo-900 dark:to-indigo-800'
+                  : 'from-gray-300 to-gray-400 dark:from-gray-800 dark:to-gray-700'
+              } transition-transform transform hover:-translate-y-3 hover:shadow-2xl`}
             >
-              <div className="flex items-center mb-4">
-                <div className="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900">
-                  <project.icon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+              {/* Icon with Badge */}
+              <div className="absolute -top-6 left-6">
+                <div
+                  className={`p-4 rounded-full shadow-md ${
+                    project.available
+                      ? 'bg-indigo-500 text-white'
+                      : 'bg-gray-500 text-gray-100'
+                  }`}
+                >
+                  <project.icon className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white ml-3">
-                  {project.title}
-                </h3>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              {/* Project Title */}
+              <h3 className="text-2xl font-bold mt-6 text-gray-900 dark:text-white">
+                {project.title}
+              </h3>
+
+              {/* Availability Badge */}
+              <span
+                className={`absolute top-4 right-4 px-4 py-1 text-sm font-medium rounded-full shadow ${
+                  project.available
+                    ? 'bg-green-500 text-white'
+                    : 'bg-yellow-500 text-gray-900'
+                }`}
+              >
+                {project.available ? 'Available' : 'Coming Soon'}
+              </span>
+
+              {/* Project Description */}
+              <p className="mt-4 text-gray-700 dark:text-gray-400">
                 {project.description}
               </p>
 
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                  {project.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className={`px-3 py-1 text-sm font-medium rounded-full ${
+                      project.available
+                        ? 'bg-indigo-200 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-400'
+                        : 'bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-500'
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
-              >
-                Learn More
-                <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
 
+              {/* Features List */}
+              <ul className="mt-6 space-y-2">
+                {project.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className={`flex items-center gap-2 text-sm ${
+                      project.available
+                        ? 'text-gray-800 dark:text-gray-300'
+                        : 'text-gray-500 dark:text-gray-500'
+                    }`}
+                  >
+                    <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Call to Action */}
+              <div className="mt-8">
+                {project.available ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg py-3 transition-all"
+                  >
+                    View Project
+                  </a>
+                ) : (
+                  <span className="block text-center bg-gray-500 text-gray-100 font-medium rounded-lg py-3">
+                    Coming Soon
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>

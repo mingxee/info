@@ -19,7 +19,7 @@ const socialLinks = [
   { name: 'Facebook', icon: <FaFacebook />, url: 'https://www.facebook.com/AmMing.Lee' },
   { name: 'Twitter', icon: <FaTwitter />, url: 'https://x.com/rachaly26616' },
   { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/mongfee168' },
-  { name: 'YouTube', icon: <FaYoutube />, url: 'https://youtube.com/@lonely_8l' },
+  { name: 'YouTube', icon: <FaYoutube />, url: 'https://www.youtube.com/@mingxee' },
   { name: 'Reddit', icon: <FaReddit />, url: 'https://www.reddit.com/u/Rachaly/' },
 ];
 

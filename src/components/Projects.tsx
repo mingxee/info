@@ -3,6 +3,15 @@ import { Bot, Wifi, Wrench, GamepadIcon } from 'lucide-react';
 
 const projects = [
   {
+    title: 'XeeChat Project',
+    description: 'A Telegram bot for chatting with AI and supporting voice, image, and video interactions.',
+    icon: Bot,
+    tags: ['Python', 'Telegram Bot API', 'AI'],
+    features: ['AI Chat', 'Voice Support', 'Image Support', 'Video Support'],
+    link: 'https://t.me/XeeChatBot',
+    available: true,
+  },
+  {
     title: 'XeeMC Project',
     description: 'A survival Minecraft server supporting both Java and Bedrock editions.',
     icon: GamepadIcon,

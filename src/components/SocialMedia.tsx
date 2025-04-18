@@ -16,7 +16,7 @@ const socialLinks = [
   { name: 'Discord', icon: <FaDiscord />, url: 'https://discord.com/users/860843138210201601' },
   { name: 'Telegram', icon: <FaTelegram />, url: 'https://t.me/mongxee' },
   { name: 'TikTok', icon: <FaTiktok />, url: 'https://www.tiktok.com/@mingxee' },
-  { name: 'Facebook', icon: <FaFacebook />, url: 'https://www.facebook.com/AmMing.Lee' },
+  { name: 'Facebook', icon: <FaFacebook />, url: 'https://www.facebook.com/ImMingXee' },
   { name: 'Twitter', icon: <FaTwitter />, url: 'https://x.com/rachaly26616' },
   { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/mongfee168' },
   { name: 'YouTube', icon: <FaYoutube />, url: 'https://www.youtube.com/@mingxee' },

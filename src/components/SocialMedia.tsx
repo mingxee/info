@@ -14,7 +14,7 @@ import {
 const socialLinks = [
   { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/mingxee' },
   { name: 'Discord', icon: <FaDiscord />, url: 'https://discord.com/users/860843138210201601' },
-  { name: 'Telegram', icon: <FaTelegram />, url: 'https://t.me/mongxee' },
+  { name: 'Telegram', icon: <FaTelegram />, url: 'https://t.me/ming_xee' },
   { name: 'TikTok', icon: <FaTiktok />, url: 'https://www.tiktok.com/@mingxee' },
   { name: 'Facebook', icon: <FaFacebook />, url: 'https://www.facebook.com/ImMingXee' },
   { name: 'Twitter', icon: <FaTwitter />, url: 'https://x.com/rachaly26616' },

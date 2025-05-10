@@ -10,7 +10,7 @@ import {
   FaDiscord,
   FaReddit,
 } from 'react-icons/fa';
-
+ 
 const socialLinks = [
   { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/mingxee' },
   { name: 'Discord', icon: <FaDiscord />, url: 'https://discord.com/users/860843138210201601' },

@@ -32,7 +32,7 @@ export default function SocialMedia() {
             Let’s Connect
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
-            I’m always open to collaborations and discussions. Find me on your favorite platform!
+            I’m always open to collaborations and discussions. Find me on your favorite platform!b
           </p>
         </div>
 

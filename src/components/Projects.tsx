@@ -3,7 +3,7 @@ import { Bot, Wifi, Wrench, GamepadIcon } from 'lucide-react';
 
 const projects = [
   {
-    title: 'XeeChat Project',
+    title: 'XeeAI Project',
     description: 'A Telegram bot for chatting with AI and supporting voice, image, and video interactions.',
     icon: Bot,
     tags: ['Python', 'Telegram Bot API', 'AI'],
@@ -21,7 +21,7 @@ const projects = [
     available: true,
   },
   {
-    title: 'Discord Gambling Bot',
+    title: 'Discord Gambling Project',
     description: 'An advanced gaming Discord bot with crypto crash, horse racing, slots, trivia, and comprehensive betting systems.',
     icon: Bot,
     tags: ['Python', 'Discord.py', 'SQLite'],
